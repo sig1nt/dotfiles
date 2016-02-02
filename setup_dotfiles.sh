@@ -1,7 +1,7 @@
-#!/bin/bash
-ln -sf $HOME/.zshrc zshrc
-ln -sf $HOME/.aliases aliases
-ln -sf $HOME/.vimrc vimrc
-if [ -d ".ssh"]; then
-    ln -sf $HOME/.ssh/config ssh_config
+#!/usr/local/bin/zsh
+ln -sf $PWD/zshrc ~/.zshrc
+ln -sf $PWD/aliases ~/.aliases
+ln -sf $PWD/vimrc ~/.vimrc
+if [ -d "$HOME/.ssh" ]; then
+    ln -sf $PWD/ssh_config ~/.ssh/config
 fi
