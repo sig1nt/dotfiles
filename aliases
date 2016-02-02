@@ -1,0 +1,27 @@
+#!/bin/zsh
+# PATH variables
+export PATH=/opt/cross/bin:$PATH:$GOPATH/bin
+
+# Git Aliases
+function ginclude() {
+   git commit -a --fixup HEAD ;
+   git rebase -i --autosquash HEAD~2;
+}
+export git_include
+alias gdiff="git diff"
+alias gdiffm="git diff master"
+
+# General Aliases
+alias "ls=ls -G"
+function mkcd() {
+	mkdir $1; cd $1
+}
+export mkcd
+function follow() {
+   $foo="$2."
+   mv $1 $foo
+   cd $2
+}
+alias mktempdir="cd `mktemp -d`"
+alias ta="tmux attach"
+alias minix_boot="VBoxManage startvm "Minix" --type headless"

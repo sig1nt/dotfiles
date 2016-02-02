@@ -1,0 +1,25 @@
+Host seclab
+   Hostname seclab
+   User nick
+
+Host vogon
+   Hostname vogon.calpoly.edu
+   User ngonella
+
+Host unix*
+   Hostname %h.csc.calpoly.edu
+   User ngonella
+
+Host bender
+   Hostname unix5.csc.calpoly.edu
+   User grade-cstaley
+   IdentityFile ~/.ssh/staley_rsa
+
+Host cisco
+   Hostname 207.62.34.181
+   User whitehat
+
+Host minix
+   Hostname localhost
+   User nick
+   Port 10022
