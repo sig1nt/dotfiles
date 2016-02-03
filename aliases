@@ -25,3 +25,4 @@ function follow() {
 alias mktempdir="cd `mktemp -d`"
 alias ta="tmux attach"
 alias minix_boot="VBoxManage startvm "Minix" --type headless"
+alias dude="raddddddd broooooooo"
