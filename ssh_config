@@ -1,25 +1,110 @@
-Host seclab
-   Hostname seclab
-   User nick
+# White Hat INF - Internal ONLY
 
-Host vogon
-   Hostname vogon.calpoly.edu
-   User ngonella
+Host gibson
+    Hostname seclab
+    User nick
+    IdentityFile ~/.ssh/id_rsa
+
+Host arch_enemy
+    Hostname arch_enemy
+    User nick
+    IdentityFile ~/.ssh/id_ed25519
+
+# House INF
+
+Host ext
+    Hostname 66.215.57.183
+    User gonella
+    IdentityFile ~/.ssh/id_ed25519
+
+Host extirc
+    Hostname 66.215.57.183
+    User gonella
+    IdentityFile ~/.ssh/id_ed25519
+    LocalForward 6697 127.0.0.1:6697
+
+# House INF - Internal ONLY
+
+Host brocalhost
+    Hostname 10.0.0.1
+    User gonella
+    IdentityFile ~/.ssh/id_ed25519
+
+# Cyber Lab - Internal ONLY
+
+Host learnlinux
+    Hostname 10.144.203.102
+    User management
+    IdentityFile ~/.ssh/id_ed25519
+
+# Cal Poly Servers
 
 Host unix*
-   Hostname %h.csc.calpoly.edu
-   User ngonella
+    Hostname %h.csc.calpoly.edu
+    User ngonella
+    IdentityFile ~/.ssh/id_rsa
 
-Host bender
-   Hostname unix5.csc.calpoly.edu
-   User grade-cstaley
-   IdentityFile ~/.ssh/staley_rsa
+Host mammen
+    Hostname unix6.csc.calpoly.edu
+    User kmammen-grader
+    IdentityFile ~/.ssh/grader_rsa
 
-Host cisco
-   Hostname 207.62.34.181
-   User whitehat
+Host taylor
+    Hostname unix6.csc.calpoly.edu
+    User getaylor-grader
+    IdentityFile ~/.ssh/grader_rsa
+
+Host mathclub
+    Hostname polylog1.calpoly.edu
+    User mathclub
+    IdentityFile ~/.ssh/id_rsa
+
+# Local Virtual Machines
 
 Host minix
-   Hostname localhost
-   User nick
-   Port 10022
+    Hostname localhost
+    Port 10022
+
+Host arch
+    Hostname localhost
+    Port 20022
+    IdentityFile ~/.ssh/id_ed25519
+
+Host cpe454
+    Hostname localhost
+    User attila
+    Port 30022
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardX11 yes
+
+Host japun
+    Hostname localhost
+    User attila
+    Port 40022
+    IdentityFile ~/.ssh/id_ed25519
+
+Host networks
+    Hostname localhost
+    User attila
+    Port 50022
+    IdentityFile ~/.ssh/id_ed25519
+
+Host openbsd
+    Hostname localhost
+    User attila
+    Port 60022
+    IdentityFile ~/.ssh/id_ed25519
+
+# Misc
+
+Host pico
+    Hostname shell2014.picoctf.com
+    User pico30732
+    IdentityFile ~/.ssh/id_ed25519
+
+Host sproxy
+    Hostname 66.215.57.183
+    User gonella
+    IdentityFile ~/.ssh/id_ed25519
+    DynamicForward 31337
+    Compression yes

@@ -1,18 +1,27 @@
 #!/bin/zsh
 # PATH variables
-export PATH=/opt/cross/bin:$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/bin:/opt/cross/bin:$GOPATH/bin:$HOME/.cargo/bin:/usr/local/sbin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:"/usr/local/include"
+export BXSHARE="$HOME/opt/bochs/share/bochs"
+
+# Enable theme
+source $HOME/.zsh_theme
+
+# Turn off tracking
+export HOMEBREW_NO_ANALYTICS=1
+
+# OpenGL Setup
+export GLM_INCLUDE_DIR="/usr/local/Cellar/glm/0.9.8.3/include"
+export GLFW_DIR=$HOME/lib/glfw-3.2.1
+export GLEW_DIR="/usr/local/Cellar/glew/2.0.0"
 
 # Git Aliases
-function ginclude() {
-   git commit -a --fixup HEAD ;
-   git rebase -i --autosquash HEAD~2;
-}
-export git_include
 alias gdiff="git diff"
 alias gdiffm="git diff master"
+alias gs="git status"
 
 # General Aliases
-alias "ls=ls -G"
 function mkcd() {
 	mkdir $1; cd $1
 }
@@ -22,7 +31,18 @@ function follow() {
    mv $1 $foo
    cd $2
 }
+function multi_print() {
+    str=$1
+    num=$2
+    v=$(printf "%-${num}s" "$str")
+    echo "${v// /$str}"
+}
+export multi_print
+
+alias ls="ls -G"
 alias mktempdir="cd `mktemp -d`"
 alias ta="tmux attach"
-alias minix_boot="VBoxManage startvm "Minix" --type headless"
-alias dude="raddddddd broooooooo"
+alias minix_boot='VBoxManage startvm "Minix" --type headless'
+alias vbm="VBoxManage"
+alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias notes="grip notes.md &> /dev/null &"
