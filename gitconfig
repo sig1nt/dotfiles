@@ -1,0 +1,8 @@
+[user]
+	email = ngonella@calpoly.edu
+	name = attila
+	signingkey = 2EDF80F9
+[push]
+	default = matching
+[core]
+	editor = vim
