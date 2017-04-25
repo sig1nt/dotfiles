@@ -30,6 +30,7 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_rust_checkers=['rustc'] 
 "let g:syntastic_c_checkers=['make'] 
 let g:syntastic_c_checkers=['gcc'] 
+let g:syntastic_python_checkers=['python3'] 
 
 let g:syntastic_c_compiler_options='-Wall -Wextra -Wshadow -pedantic -std=gnu99'
 let g:syntastic_c_splint_args='+posixlib'
