@@ -5,9 +5,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:"/usr/local/include"
 export BXSHARE="$HOME/opt/bochs/share/bochs"
 
-# Enable theme
-source $HOME/.zsh_theme
-
 # Turn off tracking
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -39,7 +36,7 @@ function multi_print() {
 }
 export multi_print
 
-alias ls="ls -G"
+alias ls="ls --color=auto"
 alias mktempdir="cd `mktemp -d`"
 alias ta="tmux attach"
 alias minix_boot='VBoxManage startvm "Minix" --type headless'
