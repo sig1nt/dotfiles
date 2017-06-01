@@ -9,6 +9,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'alfredodeza/coveragepy.vim'
+Plugin 'chr4/sslsecure.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
 
@@ -30,7 +31,7 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_rust_checkers=['rustc'] 
 "let g:syntastic_c_checkers=['make'] 
 let g:syntastic_c_checkers=['gcc'] 
-let g:syntastic_python_checkers=['python3'] 
+let g:syntastic_python_checkers=['flake8', 'python3'] 
 
 let g:syntastic_c_compiler_options='-Wall -Wextra -Wshadow -pedantic -std=gnu99'
 let g:syntastic_c_splint_args='+posixlib'
@@ -48,6 +49,13 @@ set colorcolumn=80
 set foldcolumn=1
 set foldmethod=marker
 
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+
+map q: :q
+"}}}
+
+"{{{ Custom Commands
 command W w !sudo tee % > /dev/null
 command Mdcc !pandoc -f markdown --latex-engine=pdflatex -o %:r.pdf %
 "}}}

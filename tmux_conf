@@ -1,5 +1,6 @@
 set -g escape-time 0
 set -g default-command "reattach-to-user-namespace -l zsh"
+set -g mouse on
 bind-key b split-window -c "#{pane_current_path}"
 bind-key v split-window -h -c "#{pane_current_path}"
 bind-key B split-window

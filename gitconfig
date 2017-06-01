@@ -1,8 +1,10 @@
 [user]
 	email = ngonella@calpoly.edu
-	name = attila
+	name = atti1a
 	signingkey = 2EDF80F9
 [push]
 	default = matching
 [core]
 	editor = vim
+[commit]
+    gpgsign = true
