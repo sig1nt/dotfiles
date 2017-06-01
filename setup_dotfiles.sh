@@ -1,8 +1,12 @@
 #!/usr/bin/env zsh
 
 # Install Various Programs
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+if [ ! -d ~/.oh-my-zsh ]; then
+    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+fi
 
 # Add custom theme
 ln -sf $PWD/zsh_theme ~/.oh-my-zsh/themes/custom.zsh-theme
