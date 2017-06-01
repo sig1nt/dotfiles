@@ -36,7 +36,11 @@ function multi_print() {
 }
 export multi_print
 
-alias ls="ls --color=auto"
+if [[ `uname` == "Linux" ]]; then
+    alias ls="ls --color=auto"
+else
+    alias ls="ls -G"
+fi
 alias mktempdir="cd `mktemp -d`"
 alias ta="tmux attach"
 alias minix_boot='VBoxManage startvm "Minix" --type headless'
