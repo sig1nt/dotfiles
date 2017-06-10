@@ -53,6 +53,10 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
 map q: :q
+
+set tags=./.git/tags;
+
+let mapleader = ","
 "}}}
 
 "{{{ Custom Commands
@@ -84,3 +88,4 @@ autocmd Filetype make,go setlocal noexpandtab
 autocmd Filetype text,markdown,tex setl spell spelllang=en_us tw=80 fo+=t
 autocmd Filetype gitcommit setl spell spelllang=en_us tw=72 fo+=t
 "}}}
+
