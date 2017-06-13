@@ -1,5 +1,19 @@
 set nocompatible
+
+"{{{ Syntax Highlighting
+set t_Co=256
 syntax on
+
+highlight Comment    ctermfg=blue
+highlight Error      ctermfg=none
+highlight Constant   ctermfg=none
+highlight Identifier ctermfg=none
+highlight Statement  ctermfg=none
+highlight PreProc    ctermfg=none
+highlight Type       ctermfg=none
+highlight Special    ctermfg=none
+highlight Underlined ctermfg=none
+"}}}
 
 "{{{ Vundle 
 filetype off
