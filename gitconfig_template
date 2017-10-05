@@ -1,14 +1,11 @@
 [core]
 	editor = vim
 [user]
-	email = ngonella@calpoly.edu
-	name = atti1a
-	signingkey = 2EDF80F9
-
+	email = ##EMAIL
+	name = ##NAME
 [init]
     templatedir = ~/.git_template
 [commit]
-    gpgsign = true
 [push]
 	default = matching
 

@@ -1,5 +1,13 @@
 #!/usr/bin/env zsh
 
+# Get User Info
+echo -n "Fullname for the computer: "
+read name
+echo -n "Email for the computer: "
+read email
+echo -n "Use GPG [y/N]: "
+read gpg
+
 # Install Various Programs
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     mkdir -p ~/.vim/bundle
@@ -19,9 +27,11 @@ mkdir -p ~/.vim/{swp,backup}
 ln -sf $PWD/zshrc ~/.zshrc
 ln -sf $PWD/aliases ~/.aliases
 ln -sf $PWD/vimrc ~/.vimrc
-ln -sf $PWD/gitconfig ~/.gitconfig
 ln -sf $PWD/tmux_conf ~/.tmux_conf
 ln -sf $PWD/git_template ~/.git_template
 ln -sf $PWD/ctags ~/.ctags
+ln -sf $PWD/indent ~/.indent.pro
+
+sed "s/##NAME/$name/g;s/##EMAIL/$email/g" < gitconfig_template > ~/.gitconfig
 
 source ~/.zshrc

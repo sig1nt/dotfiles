@@ -42,7 +42,7 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 
-let g:syntastic_rust_checkers=['rustc'] 
+let g:syntastic_rust_checkers=['cargo'] 
 "let g:syntastic_c_checkers=['make'] 
 let g:syntastic_c_checkers=['gcc'] 
 let g:syntastic_python_checkers=['flake8', 'python3'] 
@@ -69,6 +69,7 @@ set directory=~/.vim/swp//
 map q: :q
 
 set tags=./.git/tags;
+map <C-K> <C-]>
 
 let mapleader = ","
 "}}}
