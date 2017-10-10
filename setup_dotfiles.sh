@@ -33,6 +33,17 @@ ln -sf $PWD/git_template ~/.git_template
 ln -sf $PWD/ctags ~/.ctags
 ln -sf $PWD/indent ~/.indent.pro
 
-sed "s/##NAME/$name/g;s/##EMAIL/$email/g" < gitconfig_template > ~/.gitconfig
+# Setup the gitconfig
+cp gitconfig_template ~/.gitconfig
+
+git config --global user.name $name
+git config --global user.email $email
+
+if [ $gpg = 'y' ]; then
+    echo -n "Signing Key: "
+    read skey
+    git config --global user.signingkey $skey
+    git config --global commit.gpgsign true
+fi
 
 source ~/.zshrc

@@ -86,6 +86,7 @@ au BufRead,BufNewFile *.sql setl filetype=mysql
 au BufRead,BufNewFile *.rs setl filetype=rust
 au BufRead,BufNewFile *.glsl setl filetype=glsl
 au BufRead,BufNewFile *.md setl filetype=markdown
+au BufRead,BufNewFile .gitconfig setl filetype=gitconfig
 "}}}
 
 "{{{ Spacing 
@@ -103,5 +104,6 @@ autocmd Filetype make,go setlocal noexpandtab
 
 autocmd Filetype text,markdown,tex setl spell spelllang=en_us tw=80 fo+=t
 autocmd Filetype gitcommit setl spell spelllang=en_us tw=72 fo+=t
+autocmd Filetype gitconfig setl noexpandtab
 "}}}
 

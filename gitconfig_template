@@ -1,13 +1,8 @@
 [core]
 	editor = vim
-[user]
-	email = ##EMAIL
-	name = ##NAME
 [init]
-    templatedir = ~/.git_template
-[commit]
+	templatedir = ~/.git_template
 [push]
 	default = matching
-
 [alias]
-    ctags = !.git/hooks/ctags
+	ctags = !.git/hooks/ctags
