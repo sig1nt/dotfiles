@@ -26,6 +26,7 @@ Plugin 'alfredodeza/coveragepy.vim'
 Plugin 'chr4/sslsecure.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 
