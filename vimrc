@@ -22,11 +22,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'alfredodeza/coveragepy.vim'
-Plugin 'chr4/sslsecure.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'w0rp/ale'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 
@@ -60,6 +60,9 @@ set tags=./.git/tags;
 map <C-K> <C-]>
 
 let mapleader = ","
+
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
 "}}}
 
 "{{{ Custom Commands
