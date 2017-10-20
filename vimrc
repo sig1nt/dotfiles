@@ -56,7 +56,7 @@ set directory=~/.vim/swp//
 
 map q: :q
 
-set tags=./.git/tags;
+set tags=./.git/tags;,./tags;
 map <C-K> <C-]>
 
 let mapleader = ","
