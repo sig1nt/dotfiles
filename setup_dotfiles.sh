@@ -29,9 +29,15 @@ ln -sf $PWD/zshrc ~/.zshrc
 ln -sf $PWD/aliases ~/.aliases
 ln -sf $PWD/vimrc ~/.vimrc
 ln -sf $PWD/tmux_conf ~/.tmux_conf
-ln -sf $PWD/git_template ~/.git_template
 ln -sf $PWD/ctags ~/.ctags
 ln -sf $PWD/indent ~/.indent.pro
+
+# Handle recursive symlink on folder
+if [ -h ~/.git_template ]; then
+    rm ~/.git_template
+fi
+
+ln -sf $PWD/git_template ~/.git_template
 
 # Setup the gitconfig
 cp gitconfig_template ~/.gitconfig
