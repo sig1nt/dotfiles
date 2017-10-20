@@ -63,6 +63,7 @@ let mapleader = ","
 
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
+nmap <Leader>R :silent exec '!git ctags' <bar> :Tags<CR>
 "}}}
 
 "{{{ Custom Commands
