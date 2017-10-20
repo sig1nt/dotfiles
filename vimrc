@@ -25,31 +25,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'alfredodeza/coveragepy.vim'
 Plugin 'chr4/sslsecure.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-airline/vim-airline'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
 filetype plugin indent on
 "}}}
 
-"{{{ Syntastic 
-set statusline+=%#warningmsg# 
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-
-let g:syntastic_rust_checkers=['cargo'] 
-"let g:syntastic_c_checkers=['make'] 
-let g:syntastic_c_checkers=['gcc'] 
-let g:syntastic_python_checkers=['flake8', 'python3'] 
-
-let g:syntastic_c_compiler_options='-Wall -Wextra -Wshadow -pedantic -std=gnu99'
-let g:syntastic_c_splint_args='+posixlib'
+"{{{ ALE 
+let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 "}}}
 
 "{{{ Global Settings 
