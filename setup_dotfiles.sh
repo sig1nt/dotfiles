@@ -28,7 +28,7 @@ mkdir -p ~/.vim/{swp,backup}
 ln -sf $PWD/zshrc ~/.zshrc
 ln -sf $PWD/aliases ~/.aliases
 ln -sf $PWD/vimrc ~/.vimrc
-ln -sf $PWD/tmux_conf ~/.tmux_conf
+ln -sf $PWD/tmux.conf ~/.tmux.conf
 ln -sf $PWD/ctags ~/.ctags
 ln -sf $PWD/indent ~/.indent.pro
 
