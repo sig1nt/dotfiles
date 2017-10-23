@@ -47,3 +47,4 @@ alias mktempdir="cd `mktemp -d`"
 alias vbm="VBoxManage"
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 alias rss='newsbeuter'
+alias dev='vbm startvm Dev --type=headless; sleep 10; ssh dev'
