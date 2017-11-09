@@ -28,9 +28,12 @@ function mkcd() {
 }
 export mkcd
 function follow() {
-   $foo="$2."
-   mv $1 $foo
-   cd $2
+   mv $1 $2
+   if [ -d $2 ]; then
+       cd $2
+   else
+       cd `dirname $2`
+   fi
 }
 function multi_print() {
     str=$1

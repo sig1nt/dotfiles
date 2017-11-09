@@ -15,7 +15,7 @@ highlight Special    ctermfg=none
 highlight Underlined ctermfg=none
 "}}}
 
-"{{{ Vundle 
+"{{{ Vundle
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -27,6 +27,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'w0rp/ale'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 
@@ -92,7 +93,7 @@ setl smarttab
 
 "{{{ Filetype Customizations 
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2
-autocmd Filetype c,java,cpp setlocal tabstop=3 shiftwidth=3
+autocmd Filetype c,java,cpp,sml setlocal tabstop=3 shiftwidth=3
 autocmd Filetype hs setlocal tabstop=8 shiftwidth=8
 autocmd Filetype make,go setlocal noexpandtab
 
@@ -100,4 +101,3 @@ autocmd Filetype text,markdown,tex setl spell spelllang=en_us tw=80 fo+=t
 autocmd Filetype gitcommit setl spell spelllang=en_us tw=72 fo+=t
 autocmd Filetype gitconfig setl noexpandtab
 "}}}
-
