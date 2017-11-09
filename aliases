@@ -9,6 +9,9 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 # Turn off tracking
 export HOMEBREW_NO_ANALYTICS=1
 
+# FZF setup
+export FZF_DEFAULT_OPTS='--multi --no-mouse'
+
 # OpenGL Setup
 export GLM_INCLUDE_DIR="/usr/local/Cellar/glm/0.9.8.3/include"
 export GLFW_DIR=$HOME/lib/glfw-3.2.1

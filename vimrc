@@ -30,13 +30,9 @@ Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 
-filetype plugin indent on
-"}}}
+setl filetype=text
 
-"{{{ ALE 
-let g:airline#extensions#ale#enabled = 1
-"let g:ale_lint_on_text_changed = 'never'
-"let g:ale_lint_on_enter = 0
+filetype plugin indent on
 "}}}
 
 "{{{ Global Settings 
@@ -60,7 +56,14 @@ set tags=./.git/tags;,./tags;
 map <C-K> <C-]>
 
 let mapleader = ","
+"}}}
 
+"{{{ ALE 
+let g:airline#extensions#ale#enabled = 1
+"}}}
+
+"{{{ FZF
+nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>R :silent exec '!git ctags' <bar> :Tags<CR>
