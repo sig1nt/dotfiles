@@ -17,6 +17,9 @@ export GLM_INCLUDE_DIR="/usr/local/Cellar/glm/0.9.8.3/include"
 export GLFW_DIR=$HOME/lib/glfw-3.2.1
 export GLEW_DIR="/usr/local/Cellar/glew/2.0.0"
 
+# Less History Plz
+export LESSHISTFILE=/dev/null
+
 # Git Aliases
 alias gdiff="git diff"
 alias gdiffm="git diff master"
@@ -52,5 +55,5 @@ fi
 alias mktempdir="cd `mktemp -d`"
 alias vbm="VBoxManage"
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-alias rss='newsbeuter'
+alias rss='newsboat'
 alias dev='vbm startvm Dev --type=headless; sleep 10; ssh dev'

@@ -31,8 +31,6 @@ Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 
-setl filetype=text
-
 filetype plugin indent on
 "}}}
 
@@ -72,7 +70,8 @@ nmap <Leader>R :silent exec '!git ctags' <bar> :Tags<CR>
 
 "{{{ Custom Commands
 command W w !sudo tee % > /dev/null
-command Mdcc !pandoc -f markdown --latex-engine=pdflatex -o %:r.pdf %
+command Mdcc !pandoc -f markdown --pdf-engine=pdflatex -o %:r.pdf %
+nmap <Leader>md :Mdcc<CR>
 "}}}
 
 "{{{ ext --> filetype 
@@ -98,6 +97,6 @@ autocmd Filetype hs setlocal tabstop=8 shiftwidth=8
 autocmd Filetype make,go setlocal noexpandtab
 
 autocmd Filetype text,markdown,tex setl spell spelllang=en_us tw=80 fo+=t
-autocmd Filetype gitcommit setl spell spelllang=en_us tw=72 fo+=t
+autocmd Filetype gitcommit,mail setl spell spelllang=en_us tw=72 fo+=t
 autocmd Filetype gitconfig setl noexpandtab
 "}}}
