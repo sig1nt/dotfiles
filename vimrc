@@ -28,6 +28,8 @@ Plugin 'w0rp/ale'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'parkr/vim-jekyll'
+Plugin 'tpope/vim-liquid'
 
 call vundle#end()
 
@@ -61,6 +63,8 @@ let mapleader = ","
 
 "{{{ ALE 
 let g:airline#extensions#ale#enabled = 1
+let g:ale_rust_cargo_check_all_targets = 0
+nmap <Leader>a :ALEDetail<CR>
 "}}}
 
 "{{{ FZF
@@ -85,15 +89,15 @@ au BufRead,BufNewFile .gitconfig setl filetype=gitconfig
 "}}}
 
 "{{{ Spacing 
-setl tabstop=4
-setl shiftwidth=4
-setl expandtab
-setl smarttab
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
 "}}}
 
 "{{{ Filetype Customizations 
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2
-autocmd Filetype c,java,cpp,sml setlocal tabstop=3 shiftwidth=3
+autocmd Filetype java,sml setlocal tabstop=3 shiftwidth=3
 autocmd Filetype hs setlocal tabstop=8 shiftwidth=8
 autocmd Filetype make,go setlocal noexpandtab
 
