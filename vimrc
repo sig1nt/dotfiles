@@ -30,6 +30,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'parkr/vim-jekyll'
 Plugin 'tpope/vim-liquid'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()
 
@@ -62,6 +64,7 @@ let mapleader = ","
 "{{{ ALE 
 let g:airline#extensions#ale#enabled = 1
 let g:ale_rust_cargo_check_all_targets = 0
+let g:goyo_width = 85
 nmap <Leader>a :ALEDetail<CR>
 "}}}
 
@@ -100,7 +103,7 @@ autocmd Filetype java,sml setlocal tabstop=3 shiftwidth=3
 autocmd Filetype hs setlocal tabstop=8 shiftwidth=8
 autocmd Filetype make,go setlocal noexpandtab
 
-autocmd Filetype text,markdown,tex setl spell spelllang=en_us tw=80 fo+=t
+autocmd Filetype text,markdown,tex,plaintex setl spell spelllang=en_us tw=80 fo+=t
 autocmd Filetype gitcommit,mail setl spell spelllang=en_us tw=72 fo+=t
 autocmd Filetype gitconfig setl noexpandtab
 "}}}
