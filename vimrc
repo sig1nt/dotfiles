@@ -24,7 +24,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'w0rp/ale'
+"Plugin 'w0rp/ale'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-commentary'
@@ -59,6 +59,8 @@ set tags=./.git/tags;,./tags;
 map <C-K> <C-]>
 
 let mapleader = ","
+
+autocmd CompleteDone * pclose
 "}}}
 
 "{{{ ALE 
