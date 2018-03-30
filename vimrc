@@ -78,6 +78,19 @@ nmap <Leader>r :Tags<CR>
 nmap <Leader>R :silent exec '!git ctags' <bar> :Tags<CR>
 "}}}
 
+"{{{ Goyo
+function! s:goyo_enter()
+    setl fo-=t
+endfunction
+
+function! s:goyo_leave()
+    setl fo+=t
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+"}}}
+
 "{{{ Custom Commands
 command W w !sudo tee % > /dev/null
 command Mdcc !pandoc -f markdown --pdf-engine=pdflatex -o %:r.pdf %
