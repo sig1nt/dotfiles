@@ -87,3 +87,7 @@ setopt appendhistory
 setopt noincappendhistory
 setopt nosharehistory
 source $HOME/.aliases
+
+if which neofetch > /dev/null; then
+    neofetch
+fi

@@ -39,6 +39,10 @@ fi
 
 ln -sf $PWD/git_template ~/.git_template
 
+# Install Vim Plugins
+
+vim +PluginInstall +qall
+
 # Setup the gitconfig
 cp gitconfig_template ~/.gitconfig
 
