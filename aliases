@@ -2,7 +2,7 @@
 # PATH variables
 export PATH=$PATH:$HOME/bin:/opt/cross/bin:$GOPATH/bin:$HOME/.cargo/bin:/usr/local/sbin:/usr/sbin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:$HOME/lib
-export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/include:$HOME/include
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/include:$HOME/include:/usr/include/x86_64-linux-gnu
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/lib
 export BXSHARE="$HOME/opt/bochs/share/bochs"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
