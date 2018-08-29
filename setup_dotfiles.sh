@@ -44,7 +44,7 @@ ln -sf $PWD/git_template ~/.git_template
 vim +PluginInstall +qall
 
 # Setup the gitconfig
-cp gitconfig_template ~/.gitconfig
+cp gitconfig ~/.gitconfig
 
 git config --global user.name $name
 git config --global user.email $email
