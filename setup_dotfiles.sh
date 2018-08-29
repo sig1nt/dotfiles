@@ -35,13 +35,6 @@ ln -sf $PWD/ctags ~/.ctags
 mkdir ~/.ctags.d
 ln -sf $PWD/ctags ~/.ctags.d/main.ctags
 
-# Handle recursive symlink on folder
-if [ -h ~/.git_template ]; then
-    rm ~/.git_template
-fi
-
-ln -sf $PWD/git_template ~/.git_template
-
 # Install Vim Plugins
 
 vim +PluginInstall +qall
