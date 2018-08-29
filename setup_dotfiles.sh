@@ -30,7 +30,10 @@ ln -sf $PWD/aliases ~/.aliases
 ln -sf $PWD/vimrc ~/.vimrc
 ln -sf $PWD/tmux.conf ~/.tmux.conf
 ln -sf $PWD/ctags ~/.ctags
-ln -sf $PWD/indent ~/.indent.pro
+
+# Create link for universal ctags
+mkdir ~/.ctags.d
+ln -sf $PWD/ctags ~/.ctags.d/main.ctags
 
 # Handle recursive symlink on folder
 if [ -h ~/.git_template ]; then
