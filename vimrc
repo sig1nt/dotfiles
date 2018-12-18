@@ -108,7 +108,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 "{{{ Custom Commands
 command W w !sudo tee % > /dev/null
-command Mdcc !pandoc -f markdown --pdf-engine=pdflatex -o %:r.pdf %
+command Mdcc !pandoc --filter=pandoc-citeproc -f markdown -o %:r.pdf %
 nmap <Leader>md :Mdcc<CR>
 
 "https://vi.stackexchange.com/questions/343/how-to-edit-binary-files-with-vim
@@ -148,7 +148,7 @@ set smarttab
 "}}}
 
 "{{{ Filetype Customizations 
-autocmd Filetype html setlocal tabstop=2 shiftwidth=2
+autocmd Filetype html,htmldjango setlocal tabstop=2 shiftwidth=2
 autocmd Filetype java,sml setlocal tabstop=3 shiftwidth=3
 autocmd Filetype hs setlocal tabstop=8 shiftwidth=8
 autocmd Filetype make,go setlocal noexpandtab
