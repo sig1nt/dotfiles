@@ -34,3 +34,9 @@ export HOMEBREW_NO_ANALYTICS=1
 export GLM_INCLUDE_DIR="/usr/local/Cellar/glm/0.9.8.3/include"
 export GLFW_DIR=$HOME/lib/glfw-3.2.1
 export GLEW_DIR="/usr/local/Cellar/glew/2.0.0"
+
+alias ls="ls -G"
+alias vbm="VBoxManage"
+alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias dev='vbm startvm Dev --type=headless; sleep 10; ssh dev'
+alias ctf='vbm startvm CTF --type=headless; sleep 10; ssh ctf'

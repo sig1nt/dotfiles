@@ -1,0 +1,26 @@
+# FZF setup
+export FZF_DEFAULT_OPTS='--multi --no-mouse'
+
+# Less History Plz
+export LESSHISTFILE=/dev/null
+
+# Git Aliases
+alias gdiff="git diff"
+alias gdiffm="git diff master"
+alias gs="git status"
+
+# General Aliases
+function mkcd() {
+	mkdir $1; cd $1
+}
+export mkcd
+
+function multi_print() {
+    str=$1
+    num=$2
+    v=$(printf "%-${num}s" "$str")
+    echo "${v// /$str}"
+}
+export multi_print
+
+alias mktempdir="cd `mktemp -d`"

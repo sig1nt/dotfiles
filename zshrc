@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 setopt appendhistory
 setopt noincappendhistory
 setopt nosharehistory
-source $HOME/.aliases
+source $HOME/.setup.local
 
 if which neofetch > /dev/null; then
     neofetch

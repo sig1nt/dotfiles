@@ -2,6 +2,10 @@
 	editor = vim
 [push]
 	default = matching
+[init]
+    templatedir = ~/.git_template
+[commit]
+	verbose = true
 [alias]
 	ctags = !.git/hooks/ctags
 	lg = log --stat --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

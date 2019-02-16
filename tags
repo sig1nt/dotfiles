@@ -3,9 +3,9 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_VERSION	5.8	//
 setup.bash	setup.bash	1;"	F
-setup.dev.sh	setup.dev.sh	1;"	F
-setup.pungolia.sh	setup.pungolia.sh	1;"	F
+setup.host-dev.sh	setup.host-dev.sh	1;"	F
+setup.host-pungolia.sh	setup.host-pungolia.sh	1;"	F
 setup.sh	setup.sh	1;"	F
 setup.zsh	setup.zsh	1;"	F
