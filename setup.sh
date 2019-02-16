@@ -6,7 +6,7 @@ read name
 echo -n "Email for the computer: "
 read email
 
-shell_opt = $(basname $SHELL)
+shell_opt=$(basename $SHELL)
 
 # Install Vundle
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -17,7 +17,6 @@ fi
 # Setup Vim Folder
 mkdir -p ~/.vim/{swp,backup}
 
-<<<<<<< HEAD:setup.sh
 # Handle recursive symlink on folder
 if [ -h ~/.git_template ]; then
     rm ~/.git_template
@@ -31,18 +30,22 @@ ln -sf $PWD/ctags ~/.ctags
 ln -sf $PWD/git_template ~/.git_template
 
 # Create link for universal ctags
-mkdir ~/.ctags.d
+mkdir -p ~/.ctags.d
 ln -sf $PWD/ctags ~/.ctags.d/main.ctags
 
 # Install Vim Plugins 
 vim +PluginInstall +qall
 
 # Setup the gitconfig
-cp gitconfig ~/.gitconfig
+# cp gitconfig ~/.gitconfig
 
-git config --global user.name $name
-git config --global user.email $email
+# git config --global user.name $name
+# git config --global user.email $email
 
 if [ -d ./setup.$shell_opt ]; then
     source ./setup.$shell_opt
+fi
+
+if [ -d ./setup.$(hostname).sh ]; then
+    . ./setup.$(hostname).sh
 fi
