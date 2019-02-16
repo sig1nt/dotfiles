@@ -24,16 +24,18 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'rust-lang/rust.vim'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-commentary'
-Plugin 'parkr/vim-jekyll'
 Plugin 'tpope/vim-liquid'
 Plugin 'junegunn/goyo.vim'
 Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'ARM9/arm-syntax-vim'
 Plugin 'romainl/vim-qf'
+
+" Language Plugins
+Plugin 'rust-lang/rust.vim'
+Plugin 'ARM9/arm-syntax-vim'
+Plugin 'parkr/vim-jekyll'
 
 call vundle#end()
 
@@ -110,7 +112,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 "{{{ Custom Commands
 command W w !sudo tee % > /dev/null
-command Mdcc !pandoc -f markdown --pdf-engine=pdflatex -o %:r.pdf %
+command Mdcc !pandoc --filter=pandoc-citeproc -f markdown --pdf-engine=pdflatex -o %:r.pdf %
 nmap <Leader>md :Mdcc<CR>
 
 "https://vi.stackexchange.com/questions/343/how-to-edit-binary-files-with-vim
@@ -158,6 +160,6 @@ autocmd Filetype rust compiler cargo
 autocmd Filetype vim setl foldcolumn=1
 
 autocmd Filetype text,markdown,tex,plaintex setl spell spelllang=en_us tw=80 fo+=t
-autocmd Filetype gitcommit,mail setl spell spelllang=en_us tw=72 fo+=t
+autocmd Filetype gitcommit,mail setl spell spelllang=en_us tw=72 fo+=w
 autocmd Filetype gitconfig setl noexpandtab
 "}}}
