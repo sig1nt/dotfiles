@@ -1,0 +1,13 @@
+# Setup gopath
+export GOPATH=$HOME/go
+
+# Set my PATH
+
+# Personal scripts
+PATH=$PATH:$HOME/bin
+
+# Go Utilities
+PATH=$PATH:$GOPATH/bin
+
+# Rust Utilities
+PATH=$PATH:$HOME/.cargo/bin
