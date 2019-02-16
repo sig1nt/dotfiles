@@ -60,3 +60,4 @@ alias vbm="VBoxManage"
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 alias rss='newsboat'
 alias dev='vbm startvm Dev --type=headless; sleep 10; ssh dev'
+alias ctf='vbm startvm CTF --type=headless; sleep 10; ssh ctf'
