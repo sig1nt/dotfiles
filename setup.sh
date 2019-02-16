@@ -42,10 +42,10 @@ vim +PluginInstall +qall
 # git config --global user.name $name
 # git config --global user.email $email
 
-if [ -d ./setup.$shell_opt ]; then
+if [ -f ./setup.$shell_opt ]; then
     source ./setup.$shell_opt
 fi
 
-if [ -d ./setup.$(hostname).sh ]; then
-    . ./setup.$(hostname).sh
+if [ -f ./setup.$(hostname).sh ]; then
+    cat ./setup.$(hostname).sh >> ~/.setup.local
 fi
