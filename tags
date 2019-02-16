@@ -4,11 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ctags	git_template/hooks/ctags	1;"	F
-post-checkout	git_template/hooks/post-checkout	1;"	F
-post-commit	git_template/hooks/post-commit	1;"	F
-post-merge	git_template/hooks/post-merge	1;"	F
-post-rewrite	git_template/hooks/post-rewrite	1;"	F
 setup.bash	setup.bash	1;"	F
 setup.sh	setup.sh	1;"	F
 setup.zsh	setup.zsh	1;"	F

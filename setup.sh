@@ -17,6 +17,7 @@ fi
 # Setup Vim Folder
 mkdir -p ~/.vim/{swp,backup}
 
+<<<<<<< HEAD:setup.sh
 # Handle recursive symlink on folder
 if [ -h ~/.git_template ]; then
     rm ~/.git_template
@@ -29,11 +30,15 @@ ln -sf $PWD/tmux.conf ~/.tmux.conf
 ln -sf $PWD/ctags ~/.ctags
 ln -sf $PWD/git_template ~/.git_template
 
+# Create link for universal ctags
+mkdir ~/.ctags.d
+ln -sf $PWD/ctags ~/.ctags.d/main.ctags
+
 # Install Vim Plugins 
 vim +PluginInstall +qall
 
 # Setup the gitconfig
-cp gitconfig_template ~/.gitconfig
+cp gitconfig ~/.gitconfig
 
 git config --global user.name $name
 git config --global user.email $email

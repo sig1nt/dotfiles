@@ -1,8 +1,0 @@
-[core]
-	editor = vim
-[init]
-	templatedir = ~/.git_template
-[push]
-	default = matching
-[alias]
-	ctags = !.git/hooks/ctags
