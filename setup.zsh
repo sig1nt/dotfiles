@@ -5,5 +5,6 @@ fi
 
 # Add custom theme
 ln -sf $PWD/zsh_theme ~/.oh-my-zsh/themes/custom.zsh-theme
+ln -sf $PWD/zshrc ~/.zshrc
 
 source ~/.zshrc
