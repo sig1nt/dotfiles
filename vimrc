@@ -7,6 +7,7 @@ syntax on
 highlight Comment           ctermfg=blue
 highlight SpecialComment    ctermfg=blue
 highlight String            ctermfg=DarkGrey
+highlight Character         ctermfg=DarkGrey
 highlight Error             ctermfg=none
 highlight Constant          ctermfg=none
 highlight Identifier        ctermfg=none
@@ -27,23 +28,20 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-liquid'
 Plugin 'junegunn/goyo.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'romainl/vim-qf'
+Plugin 'ajh17/VimCompletesMe'
+
 
 " Language Plugins
 Plugin 'rust-lang/rust.vim'
 Plugin 'ARM9/arm-syntax-vim'
-Plugin 'parkr/vim-jekyll'
 
 call vundle#end()
 
 filetype plugin indent on
 
-let g:rust_conceal = 1 
-let g:rust_conceal_mod_path = 1 
-let g:goyo_width = 85
 "}}}
 
 "{{{ Global Settings 
@@ -94,7 +92,7 @@ set statusline+=[%04l,%04v]
 nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
-nmap <Leader>R :silent exec '!git ctags' <bar> :Tags<CR>
+nmap <Leader>R :silent exec '!ctags -R .' <bar> :Tags<CR>
 "}}}
 
 "{{{ Goyo
@@ -108,6 +106,7 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+let g:goyo_width = 85
 "}}}
 
 "{{{ Custom Commands
