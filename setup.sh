@@ -5,12 +5,8 @@ echo -n "Fullname for the computer: "
 read name
 echo -n "Email for the computer: "
 read email
-echo "Select a shell: \
-    1) zsh
-    2) bash
 
-    Choice [zsh]:"
-read shell_opt
+shell_opt = $(basname $SHELL)
 
 # Install Vundle
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -42,11 +38,6 @@ cp gitconfig_template ~/.gitconfig
 git config --global user.name $name
 git config --global user.email $email
 
-# Set up shell specifics
-if [ $shell_opt -e "bash" ]
-    $shell_opt = "bash"
-else
-    $shell_opt = "zsh"
+if [ -d ./setup.$shell_opt ]; then
+    source ./setup.$shell_opt
 fi
-
-source ./setup.$shell_opt
