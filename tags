@@ -7,5 +7,6 @@
 setup.bash	setup.bash	1;"	F
 setup.host-dev.sh	setup.host-dev.sh	1;"	F
 setup.host-pungolia.sh	setup.host-pungolia.sh	1;"	F
+setup.host-seclab-kirk.sh	setup.host-seclab-kirk.sh	1;"	F
 setup.sh	setup.sh	1;"	F
 setup.zsh	setup.zsh	1;"	F
