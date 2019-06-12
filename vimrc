@@ -4,10 +4,10 @@ set nocompatible
 set t_Co=256
 syntax on
 
-highlight Comment           ctermfg=blue
-highlight SpecialComment    ctermfg=blue
-highlight String            ctermfg=DarkGrey
-highlight Character         ctermfg=DarkGrey
+highlight Comment           guifg=Blue
+highlight SpecialComment    guifg=Blue
+highlight String            ctermfg=Grey
+highlight Character         ctermfg=Grey
 highlight Error             ctermfg=none
 highlight Constant          ctermfg=none
 highlight Identifier        ctermfg=none
@@ -33,7 +33,6 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'romainl/vim-qf'
 Plugin 'ajh17/VimCompletesMe'
 
-
 " Language Plugins
 Plugin 'rust-lang/rust.vim'
 Plugin 'ARM9/arm-syntax-vim'
@@ -49,6 +48,7 @@ set backspace=indent,eol,start
 
 set autoread
 set splitright
+set splitbelow
 
 set number
 set ruler
@@ -58,6 +58,7 @@ set foldmethod=marker
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
+set undodir=~/.vim/undodir
 
 map q: :q
 
@@ -69,6 +70,12 @@ let mapleader = ","
 autocmd CompleteDone * pclose
 
 hi clear conceal
+
+set clipboard+=unnamed
+set undofile
+set incsearch
+set ttyfast
+
 "}}}
 
 "{{{ Status Line
@@ -130,6 +137,29 @@ function! PasteForStatusline()
         return ""
     endif
 endfunction
+
+" http://learnvimscriptthehardway.stevelosh.com/chapters/07.html
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Preserve overridden functionaity w/ leader prefix
+nnoremap <leader>; ;
+nnoremap <leader>, ,
+
+" https://jezenthomas.com/a-function-for-moving-to-the-beginning-of-the-line
+" Jump to end of line
+noremap L $
+" Jump to first character or column
+noremap <silent> H :call FirstCharOrFirstCol()<cr>
+
+function! FirstCharOrFirstCol()
+  let current_col = virtcol('.')
+  normal ^
+  let first_char = virtcol('.')
+  if current_col <= first_char
+    normal 0
+  endif
+endfunction
 "}}}
 
 "{{{ ext --> filetype 
@@ -141,6 +171,7 @@ au BufRead,BufNewFile *.glsl setl filetype=glsl
 au BufRead,BufNewFile *.md setl filetype=markdown
 au BufRead,BufNewFile .gitconfig setl filetype=gitconfig
 au BufRead,BufNewFile *.ts setl filetype=c
+au BufRead,BufNewFile *.log setl filetype=log
 "}}}
 
 "{{{ Spacing 
@@ -161,4 +192,5 @@ autocmd Filetype vim setl foldcolumn=1
 autocmd Filetype text,markdown,tex,plaintex setl spell spelllang=en_us tw=80 fo+=t
 autocmd Filetype gitcommit,mail setl spell spelllang=en_us tw=72 fo+=w
 autocmd Filetype gitconfig setl noexpandtab
+autocmd Filetype log setl colorcolumn= readonly
 "}}}
